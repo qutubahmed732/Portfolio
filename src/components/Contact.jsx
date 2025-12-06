@@ -1,15 +1,68 @@
-export default function Contact() {
-    return (
-        <section id="contact" className="py-16 px-5 bg-gray-100 text-gray-900">
-            <h2 className="text-3xl font-bold text-center">Contact</h2>
+import { Mail, Linkedin, Github } from "lucide-react";
 
-            <div className="max-w-xl mx-auto mt-6 space-y-3 text-center">
-                <div className="w-1/2 mx-auto flex flex-col md:items-start">
-                    <p><strong>Email:</strong> <a href="mailto:qutubahmed014@gmail.com">qutubahmed104@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+923423898551">0342-3898551</a></p>
-                    <p><strong>Address:</strong> Karachi, Pakistan</p>
-                </div>
+export default function Contact() {
+  return (
+    <section id="contact" className="py-24 bg-slate-900 text-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Let's work together</h2>
+          <p className="text-slate-400 mb-12 max-w-xl mx-auto">
+            I'm currently looking for internship opportunities to apply my skills and grow as a developer. Have a question or want to say hi?
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 text-left bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Contact Details</h3>
+                <p className="text-slate-400 text-sm">Feel free to reach out through any of these platforms.</p>
+              </div>
+
+              <div className="space-y-4">
+                <a href="mailto:qutubahmed104@gmail.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+                  <div className="p-2 bg-indigo-600/20 rounded-lg text-indigo-400">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  qutubahmed104@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/qutub-ahmed-9429982a6/" target="_blank" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+                  <div className="p-2 bg-indigo-600/20 rounded-lg text-indigo-400">
+                    <Linkedin className="w-5 h-5" />
+                  </div>
+                  linkedin.com/in/qutub-ahmed
+                </a>
+                <a href="https://github.com/qutubahmed732" target="_blank" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+                  <div className="p-2 bg-indigo-600/20 rounded-lg text-indigo-400">
+                    <Github className="w-5 h-5" />
+                  </div>
+                  github.com/qutub-ahmed
+                </a>
+              </div>
             </div>
-        </section>
-    );
+
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <label className="block text-sm font-medium text-slate-400 mb-1">Name</label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-white placeholder-slate-600"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-400 mb-1">Message</label>
+                <textarea
+                  rows="4"
+                  className="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-white placeholder-slate-600"
+                  placeholder="Hello, I'd like to discuss an opportunity..."
+                ></textarea>
+              </div>
+              <button className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium transition-colors">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

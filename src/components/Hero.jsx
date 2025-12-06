@@ -1,33 +1,42 @@
 import myImage from "../images/my_image.jpeg";
+import { ChevronDown, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div className="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className=" sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Hi, I'm Qutub Ahmed
-            <br className="hidden lg:inline-block" />
-            A frontend Developer
-          </h1>
-          <p className="mb-8 md:text-lg leading-relaxed text-balance p-1">
-            I'm from Karachi who loves creating clean, modern, and responsive websites. I enjoy turning simple ideas into smooth, functional interfaces using React.js, Tailwind CSS, and JavaScript. I'm always learning new things, improving my skills, and building projects that look good and work even better.
-          </p>
-          <div className="flex justify-center">
-            <a href="#contact" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Contact Me
-            </a>
-            {/* <a href="" className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
-            </a> */}
-          </div>
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+      {/* Background blobs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+
+      <div className="text-center max-w-3xl z-10">
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-sm font-medium mb-6">
+          <span className="flex w-2 h-2 bg-indigo-600 rounded-full mr-2 animate-pulse"></span>
+          Available for Internships
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
-            className="w-100 h-100 object-cover object-center rounded-2xl"
-            alt="hero"
-            src={myImage}
-          />
+        <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          Hi, I'm <span className="bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Qutub Ahmed</span>
+        </h1>
+        <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed">
+          Frontend Developer specialized in building exceptional digital experiences with <span className="font-semibold text-slate-800">Next.js</span> and <span className="font-semibold text-slate-800">React</span>.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-200"
+          >
+            View My Work
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-700 border border-slate-200 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+          >
+            Contact Me <Mail className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="mt-16 animate-bounce text-slate-400 cursor-pointer" onClick={() => scrollToSection('about')}>
+          <ChevronDown className="w-6 h-6 mx-auto" />
         </div>
       </div>
     </section>
