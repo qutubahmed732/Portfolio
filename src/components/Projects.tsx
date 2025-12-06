@@ -18,7 +18,7 @@ export default function Projects() {
       description: "A complete CRUD todo app with filters & local storage.",
       tech: ["React", "Tailwind", "Typescript", "local storage"],
       live: "https://todo-local-storage-eight.vercel.app",
-      repo: "#",
+      repo: "https://github.com/qutubahmed732/Todo_LocalStorage",
       image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.shopify.com&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
@@ -26,7 +26,7 @@ export default function Projects() {
       description: "Blog system using Appwrite database & authentication.",
       tech: ["React", "React hook form", "Typescript", "RTE editor", "Appwrite"],
       live: "https://mega-blog-lake-seven.vercel.app",
-      repo: "#",
+      repo: "https://github.com/qutubahmed732/megaBlog",
       image: "https://api.microlink.io/?url=https%3A%2F%2Fweather.com&screenshot=true&meta=false&embed=screenshot.url"
     },
     {
@@ -34,7 +34,7 @@ export default function Projects() {
       description: "Live currency converter using real APIs.",
       tech: ["Next.js", "Tailwind", "Currency API"],
       live: "https://currency-converter-chi-kohl.vercel.app",
-      repo: "#",
+      repo: "https://github.com/qutubahmed732/Currency-Converter",
       image: "https://api.microlink.io/?url=https%3A%2F%2Fweather.com&screenshot=true&meta=false&embed=screenshot.url"
     },
   ];
