@@ -1,6 +1,7 @@
 import { Github, ExternalLink } from "lucide-react";
 import passwordGenerator from "../assets/passwordGeneratorImg.png";
-
+import todoApp from "../assets/todo-app.png";
+import megaBlog from "../assets/mega-blog.png";
 
 export default function Projects() {
   
@@ -16,10 +17,10 @@ export default function Projects() {
     {
       title: "Todo App with local storage",
       description: "A complete CRUD todo app with filters & local storage.",
-      tech: ["React", "Tailwind", "Typescript", "local storage"],
+      tech: ["React", "Tailwind", "local storage", "context-API"],
       live: "https://todo-local-storage-eight.vercel.app",
       repo: "https://github.com/qutubahmed732/Todo_LocalStorage",
-      image: "https://api.microlink.io/?url=https%3A%2F%2Fwww.shopify.com&screenshot=true&meta=false&embed=screenshot.url"
+      image: todoApp
     },
     {
       title: "Blog with Appwrite",
@@ -27,7 +28,7 @@ export default function Projects() {
       tech: ["React", "React hook form", "Typescript", "RTE editor", "Appwrite"],
       live: "https://mega-blog-lake-seven.vercel.app",
       repo: "https://github.com/qutubahmed732/megaBlog",
-      image: "https://api.microlink.io/?url=https%3A%2F%2Fweather.com&screenshot=true&meta=false&embed=screenshot.url"
+      image: megaBlog
     },
     {
       title: "Currency Converter",
@@ -38,7 +39,6 @@ export default function Projects() {
       image: "https://api.microlink.io/?url=https%3A%2F%2Fweather.com&screenshot=true&meta=false&embed=screenshot.url"
     },
   ];
-
 
   return (
     <section id="projects" className="py-24 bg-white">
