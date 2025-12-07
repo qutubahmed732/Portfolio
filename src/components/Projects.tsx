@@ -43,7 +43,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 bg-white">
             <div className="container mx-auto px-6">
-              <div className="flex flex-col md:flex-row justify-between items-end mb-12 max-w-6xl mx-auto">
+              <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 max-w-6xl mx-auto">
                 <div>
                   <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
                   <p className="text-slate-600">A selection of my recent work.</p>
