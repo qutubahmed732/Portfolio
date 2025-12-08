@@ -6,21 +6,6 @@ export default function Contact() {
 
   const [messagesname, setMessagesname] = useState("");
   const [messagesMessage, setMessagesMessage] = useState("");
-  let [feedBacks, setfeedBacks] = useState(() => {
-    return JSON.parse(localStorage.getItem("feedbacks")) || [];
-  });
-  const [arr, setArr] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem("feedbacks", JSON.stringify(feedBacks));
-    console.log(feedBacks)
-    async function retriveFunc(){
-      const retrievedData = await services.getFeedbacks();
-      setArr(retrievedData.documents);
-      console.log(arr)
-    }
-    retriveFunc()
-  }, [feedBacks])
 
   async function feedbackFunction(e) {
     e.preventDefault();
@@ -29,13 +14,7 @@ export default function Contact() {
       message: messagesMessage
     }
 
-    console.log(data)
-
-    const awaitedData = await services.sendFeedbacks(data);
-    console.log(awaitedData);
-
-
-    setfeedBacks(prev => [...prev, data]);
+    await services.sendFeedbacks(data);
     setMessagesname("");
     setMessagesMessage("");
   }
