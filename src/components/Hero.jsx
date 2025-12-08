@@ -21,18 +21,18 @@ export default function Hero() {
           Frontend Developer specialized in building exceptional digital experiences with <span className="font-semibold text-slate-800">Next.js</span> and <span className="font-semibold text-slate-800">React</span>.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => scrollToSection('projects')}
-            className="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-200"
+          <a
+            href="#projects"
+            className="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-lg shadow-indigo-200 cursor-pointer"
           >
             View My Work
-          </button>
-          <button
-            onClick={() => scrollToSection('contact')}
+          </a>
+          <a
+            href="#contact"
             className="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-700 border border-slate-200 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
           >
             Contact Me <Mail className="w-4 h-4" />
-          </button>
+          </a>
         </div>
 
         <div className="mt-16 animate-bounce text-slate-400 cursor-pointer" onClick={() => scrollToSection('about')}>
