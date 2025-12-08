@@ -1,6 +1,46 @@
 import { Mail, Linkedin, Github } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import services from "../appwrite/appwrite";
 
 export default function Contact() {
+
+  const [messagesname, setMessagesname] = useState("");
+  const [messagesMessage, setMessagesMessage] = useState("");
+  let [feedBacks, setfeedBacks] = useState(() => {
+    return JSON.parse(localStorage.getItem("feedbacks")) || [];
+  });
+  const [arr, setArr] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem("feedbacks", JSON.stringify(feedBacks));
+    console.log(feedBacks)
+    async function retriveFunc(){
+      const retrievedData = await services.getFeedbacks();
+      setArr(retrievedData.documents);
+      console.log(arr)
+    }
+    retriveFunc()
+  }, [feedBacks])
+
+  async function feedbackFunction(e) {
+    e.preventDefault();
+    const data = {
+      name: messagesname,
+      message: messagesMessage
+    }
+
+    console.log(data)
+
+    const awaitedData = await services.sendFeedbacks(data);
+    console.log(awaitedData);
+
+
+    setfeedBacks(prev => [...prev, data]);
+    setMessagesname("");
+    setMessagesMessage("");
+  }
+
+
   return (
     <section id="contact" className="py-24 bg-slate-900 text-white">
       <div className="container mx-auto px-6">
@@ -39,10 +79,12 @@ export default function Contact() {
               </div>
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={feedbackFunction}>
               <div>
                 <label className="block text-sm font-medium text-slate-400 mb-1">Name</label>
                 <input
+                  value={messagesname}
+                  onChange={(e) => setMessagesname(e.target.value)}
                   type="text"
                   className="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-white placeholder-slate-600"
                   placeholder="Your Name"
@@ -51,6 +93,8 @@ export default function Contact() {
               <div>
                 <label className="block text-sm font-medium text-slate-400 mb-1">Message</label>
                 <textarea
+                  value={messagesMessage}
+                  onChange={(e) => setMessagesMessage(e.target.value)}
                   rows="4"
                   className="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all text-white placeholder-slate-600"
                   placeholder="Hello, I'd like to discuss an opportunity..."
