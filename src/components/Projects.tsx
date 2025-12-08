@@ -2,7 +2,9 @@ import { Github, ExternalLink } from "lucide-react";
 import passwordGenerator from "../assets/passwordGeneratorImg.png";
 import todoApp from "../assets/todo-app.png";
 import megaBlog from "../assets/mega-blog.png";
-import { useState, useEffect, useRef } from "react";
+import currencyConverter from "../assets/currencyConverter.png";
+
+import { useState, useEffect } from "react";
 
 export default function Projects() {
 
@@ -49,7 +51,7 @@ export default function Projects() {
       tech: ["Next.js", "Tailwind", "Currency API"],
       live: "https://currency-converter-chi-kohl.vercel.app",
       repo: "https://github.com/qutubahmed732/Currency-Converter",
-      image: "https://api.microlink.io/?url=https%3A%2F%2Fweather.com&screenshot=true&meta=false&embed=screenshot.url"
+      image: currencyConverter
     },
   ];
 

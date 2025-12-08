@@ -1,5 +1,5 @@
 import { Mail, Linkedin, Github } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import services from "../appwrite/appwrite";
 
 export default function Contact() {
