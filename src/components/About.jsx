@@ -39,7 +39,7 @@ export default function About() {
                   <img
                     src={myImage}
                     alt="Qutub Ahmed"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[0px_-20px]"
                   />
                 </div>
               </div>
