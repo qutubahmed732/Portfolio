@@ -1,16 +1,63 @@
-# React + Vite
+# Portfolio Website – Qutub Ahmed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built to showcase my skills, projects, and contact information as a Frontend Developer.
 
-Currently, two official plugins are available:
+## 👤 About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hi, I'm **Qutub Ahmed**, a Frontend Developer based in Karachi, Pakistan.  
+I specialize in building responsive, user-friendly web interfaces using modern frontend technologies.
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- React.js  
+- Tailwind CSS  
+- Redux Toolkit  
+- Context API  
+- Next.js  
+- Basic Backend (Cloud-based concepts)  
 
-## Expanding the ESLint configuration
+## 📂 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Fully responsive design (mobile, tablet & desktop)
+- Clean and modern UI
+- Projects showcase section
+- Contact section with email and phone
+- Smooth scrolling and interactive UI
+- Optimized for performance and readability
+
+## 🛠️ Projects Included
+
+- Password Generator (React + Tailwind)
+- Todo App with Local Storage
+- Blog Application (Appwrite)
+- Currency Converter
+- Other practice and learning projects
+
+## 📸 Preview
+
+Live Demo:  
+👉 **[Portfolio Live Link](#)** _(add your deployed link here)_
+
+## 📬 Contact
+
+- **Email:** qutubahmed104@gmail.com  
+- **Phone:** 03423898551  
+- **Location:** Karachi, Pakistan  
+
+## 📌 Purpose
+
+This portfolio is created for:
+- Internship applications
+- Junior Frontend Developer roles
+- Showcasing real-world frontend projects
+- Continuous learning and improvement
+
+## 🧠 What I’m Learning Next
+
+- Advanced React Patterns  
+- TypeScript  
+- Backend Integration  
+- Scalable Frontend Architecture  
