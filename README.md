@@ -39,7 +39,7 @@ I specialize in building responsive, user-friendly web interfaces using modern f
 ## 📸 Preview
 
 Live Demo:  
-👉 **[Portfolio Live Link](#)** _(add your deployed link here)_
+👉 **[Portfolio Live Link](https://portfolio-virid-one-85.vercel.app/)** _(add your deployed link here)_
 
 ## 📬 Contact
 
