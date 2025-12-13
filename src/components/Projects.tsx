@@ -3,6 +3,8 @@ import passwordGenerator from "../assets/passwordGeneratorImg.png";
 import todoApp from "../assets/todo-app.png";
 import megaBlog from "../assets/mega-blog.png";
 import currencyConverter from "../assets/currencyConverter.png";
+import hooksAgency from "../assets/hooks_agency.png";
+import weather_app from "../assets/weather_app.png";
 
 import { useState, useEffect } from "react";
 
@@ -53,6 +55,22 @@ export default function Projects() {
       repo: "https://github.com/qutubahmed732/Currency-Converter",
       image: currencyConverter
     },
+    {
+      title: "Hooks Agency | Clone website",
+      description: "A responsive frontend practice website built using HTML, SCSS, and JavaScript, featuring a structured layout and a modern navigation bar.",
+      tech: ["HTML", "JavaScript", "SCSS"],
+      live: "https://hooks-agency-clone.vercel.app",
+      repo: "https://github.com/qutubahmed732/hooks_agency_clone",
+      image: hooksAgency
+    },
+    {
+      title: "Weather App",
+      description: "The app focuses on API integration, responsive design, and delivering real-time weather information with a smooth user experience.",
+      tech: ["HTML", "CSS", "JavaScript", "Weather-API"],
+      live: "https://qutubahmed732.github.io/weather_app_new/",
+      repo: "https://github.com/qutubahmed732/weather_app_new",
+      image: weather_app
+    }
   ];
 
   return (

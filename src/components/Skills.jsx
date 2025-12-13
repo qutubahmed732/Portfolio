@@ -6,7 +6,7 @@ export default function Skills() {
     { category: "Frontend Core", icon: <Code2 className="w-6 h-6" />, items: ["HTML5", "CSS3", "JavaScript (ES6+)"] },
     { category: "Frameworks", icon: <Layout className="w-6 h-6" />, items: ["React.js", "Next.js 14", "TypeScript"] },
     { category: "State Management", icon: <Cpu className="w-6 h-6" />, items: ["Redux Toolkit", "Context API"] },
-    { category: "Styling & UI", icon: <Terminal className="w-6 h-6" />, items: ["Tailwind CSS", "Shadcn UI"] },
+    { category: "Styling & UI", icon: <Terminal className="w-6 h-6" />, items: ["Tailwind CSS", "Shadcn UI", "SCSS"] },
     { category: "Backend & Services", icon: <Server className="w-6 h-6" />, items: ["Appwrite", "Firebase"] },
     { category: "Tools", icon: <Database className="w-6 h-6" />, items: ["Git/GitHub", "VS Code", "Vercel"] },
   ];
