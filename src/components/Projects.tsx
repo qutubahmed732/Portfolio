@@ -73,6 +73,8 @@ export default function Projects() {
     }
   ];
 
+  
+
   return (
     <section id="projects" className="py-24 bg-white">
       <div className="container mx-auto px-6">

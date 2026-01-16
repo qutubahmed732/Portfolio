@@ -35,6 +35,8 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* <p className="">Hire me to unlock and bring out my full potential.</p> */}
+
         <div className="mt-16 animate-bounce text-slate-400 cursor-pointer" onClick={() => scrollToSection('about')}>
           <ChevronDown className="w-6 h-6 mx-auto" />
         </div>

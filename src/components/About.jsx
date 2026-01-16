@@ -8,7 +8,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
             <span className="w-8 h-1 bg-indigo-600 rounded-full"></span>
-            About Me
+            {/* About Me */} WHO I AM?
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
@@ -17,6 +17,9 @@ export default function About() {
               </p>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 Currently focused on the <strong className="text-indigo-600">React & Next.js ecosystem</strong>, I love bridging the gap between design and engineering. I treat every project as an opportunity to learn a new tool, optimize performance, or improve accessibility.
+              </p>
+              <p className="text-lg text-black font-bold tracking-tight mb-6 leading-relaxed">
+                Hire me to unlock and bring out my full potential.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="p-2 bg-slate-100 rounded-full hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
