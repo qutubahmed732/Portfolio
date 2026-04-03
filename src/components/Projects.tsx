@@ -5,6 +5,7 @@ import megaBlog from "../assets/mega-blog.png";
 import currencyConverter from "../assets/currencyConverter.png";
 import hooksAgency from "../assets/hooks_agency.png";
 import weather_app from "../assets/weather_app.png";
+import resume_analyzer from "../assets/Resume_Analyzer.png";
 
 import { useState, useEffect } from "react";
 
@@ -70,6 +71,14 @@ export default function Projects() {
       live: "https://qutubahmed732.github.io/weather_app_new/",
       repo: "https://github.com/qutubahmed732/weather_app_new",
       image: weather_app
+    },
+    {
+      title: "AI Resume Analyzer",
+      description: "The app focuses on API integration, responsive design, and delivering real-time weather information with a smooth user experience.",
+      tech: ["React.JS", "Tailwind", "Express.JS", "Gemini model-API"],
+      live: "https://ai-resume-analyzer-green-nine.vercel.app/",
+      repo: "https://github.com/qutubahmed732/AI_resume_analyzer",
+      image: resume_analyzer
     }
   ];
 
