@@ -6,6 +6,7 @@ import currencyConverter from "../assets/currencyConverter.png";
 import hooksAgency from "../assets/hooks_agency.png";
 import weather_app from "../assets/weather_app.png";
 import resume_analyzer from "../assets/Resume_Analyzer.png";
+import Chatbot from "../assets/Chatbot.png";
 
 import { useState, useEffect } from "react";
 
@@ -74,18 +75,26 @@ export default function Projects() {
     },
     {
       title: "AI Resume Analyzer",
-      description: "The app focuses on API integration, responsive design, and delivering real-time weather information with a smooth user experience.",
+      description: "AI Resume Analyzer is an intelligent tool that evaluates and scores resumes, providing actionable insights to help job seekers optimize their applications. It leverages AI to identify strengths, detect gaps, and suggest improvements for a better chance at landing interviews",
       tech: ["React.JS", "Tailwind", "Express.JS", "Gemini model-API"],
       live: "https://ai-resume-analyzer-green-nine.vercel.app/",
       repo: "https://github.com/qutubahmed732/AI_resume_analyzer",
       image: resume_analyzer
-    }
+    },
+    {
+      title: "Chatbot",
+      description: "AI Chatbot is an intelligent conversational assistant that understands user queries, provides accurate responses, and engages naturally. It leverages AI to simulate human-like interactions, helping users get information, support, or guidance instantly",
+      tech: ["React.JS", "Tailwind", "Express.JS", "Gemini model-API", "Clerk-Authentication"],
+      live: "https://ai-chatbot-blue-six.vercel.app/",
+      repo: "https://github.com/qutubahmed732/AI-Chatbot",
+      image: Chatbot
+    },
   ];
 
-  
+
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-[#f2f2f2]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between md:items-end mb-12 max-w-6xl mx-auto">
           <div>
@@ -99,7 +108,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div key={index} className="group bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" onClick={(e) => {e.stopPropagation() ,setActive(index)}}>
+            <div key={index} className="group bg-white border border-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" onClick={(e) => { e.stopPropagation(), setActive(index) }}>
               <div className="relative h-48 overflow-hidden bg-slate-100">
                 {/* Project Image Placeholder */}
                 <img
