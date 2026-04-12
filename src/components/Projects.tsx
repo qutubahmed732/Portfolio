@@ -7,6 +7,7 @@ import hooksAgency from "../assets/hooks_agency.png";
 import weather_app from "../assets/weather_app.png";
 import resume_analyzer from "../assets/Resume_Analyzer.png";
 import Chatbot from "../assets/Chatbot.png";
+import stickynotes from "../assets/stickyNotes.png";
 
 import { useState, useEffect } from "react";
 
@@ -88,6 +89,14 @@ export default function Projects() {
       live: "https://ai-chatbot-blue-six.vercel.app/",
       repo: "https://github.com/qutubahmed732/AI-Chatbot",
       image: Chatbot
+    },
+    {
+      title: "Sticky Notes",
+      description: "A sleek, interactive sticky notes application built with React and Tailwind CSS, featuring smooth Framer Motion animations and persistent data through Local Storage.",
+      tech: ["React.JS", "Tailwind", "local storage", "motion-framer"],
+      live: "https://stickykeepnotes.netlify.app/",
+      repo: "https://github.com/qutubahmed732/sticky_notes",
+      image: stickynotes
     },
   ];
 

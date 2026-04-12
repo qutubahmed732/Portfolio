@@ -7,8 +7,8 @@ export default function Skills() {
     { category: "Frameworks", icon: <Layout className="w-6 h-6" />, items: ["React.js", "Next.js 14", "TypeScript"] },
     { category: "State Management", icon: <Cpu className="w-6 h-6" />, items: ["Redux Toolkit", "Context API"] },
     { category: "Styling & UI", icon: <Terminal className="w-6 h-6" />, items: ["Tailwind CSS", "Shadcn UI", "SCSS"] },
-    { category: "Backend & Services", icon: <Server className="w-6 h-6" />, items: ["Appwrite", "Firebase"] },
-    { category: "Tools", icon: <Database className="w-6 h-6" />, items: ["Git/GitHub", "VS Code", "Vercel"] },
+    { category: "Backend & Services", icon: <Server className="w-6 h-6" />, items: ["Appwrite", "Firebase", "Clerk-Authentication", "Gemini model-API"] },
+    { category: "Tools", icon: <Database className="w-6 h-6" />, items: ["Git/GitHub", "VS Code", "Vercel", "Netlify"] },
   ];
 
   return (
