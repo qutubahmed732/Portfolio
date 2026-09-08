@@ -1,44 +1,32 @@
-import { Code2, Layout, Cpu, Terminal, Server, Database } from "lucide-react";
+import { Code2, Layout, Boxes, Palette, Server, Wrench } from "lucide-react";
+
+const skills = [
+  { category: "Core web", icon: Code2, items: ["HTML5", "CSS3", "JavaScript (ES6+)"] },
+  { category: "React ecosystem", icon: Layout, items: ["React.js", "Next.js", "TypeScript"] },
+  { category: "State & forms", icon: Boxes, items: ["Redux Toolkit", "Context API", "React Hook Form"] },
+  { category: "Styling & UI", icon: Palette, items: ["Tailwind CSS", "SCSS", "Responsive Design"] },
+  { category: "Services", icon: Server, items: ["Appwrite", "Firebase", "Clerk", "Gemini API"] },
+  { category: "Workflow", icon: Wrench, items: ["Git & GitHub", "VS Code", "Vercel", "Netlify"] },
+];
 
 export default function Skills() {
-  
-  const skills = [
-    { category: "Frontend Core", icon: <Code2 className="w-6 h-6" />, items: ["HTML5", "CSS3", "JavaScript (ES6+)"] },
-    { category: "Frameworks", icon: <Layout className="w-6 h-6" />, items: ["React.js", "Next.js 14", "TypeScript"] },
-    { category: "State Management", icon: <Cpu className="w-6 h-6" />, items: ["Redux Toolkit", "Context API"] },
-    { category: "Styling & UI", icon: <Terminal className="w-6 h-6" />, items: ["Tailwind CSS", "Shadcn UI", "SCSS"] },
-    { category: "Backend & Services", icon: <Server className="w-6 h-6" />, items: ["Appwrite", "Firebase", "Clerk-Authentication", "Gemini model-API"] },
-    { category: "Tools", icon: <Database className="w-6 h-6" />, items: ["Git/GitHub", "VS Code", "Vercel", "Netlify"] },
-  ];
-
   return (
-    <section id="skills" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Technical Arsenal</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            My stack is built around the modern JavaScript ecosystem. I focus on writing maintainable, type-safe, and scalable code.
-          </p>
+    <section id="skills" className="reveal-section px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="max-w-2xl">
+          <p className="reveal-item text-sm font-bold uppercase tracking-[.2em] text-cyan-300">02 / Toolkit</p>
+          <h2 className="reveal-item mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl">Tools I use to turn ideas into interfaces.</h2>
+          <p className="reveal-item mt-5 leading-7 text-zinc-400">A practical stack centered on the modern JavaScript ecosystem. I care about readable code, reusable components, responsive behavior, and shipping working products.</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-indigo-50 text-indigo-600 rounded-lg">
-                  {skill.icon}
-                </div>
-                <h3 className="font-bold text-slate-800">{skill.category}</h3>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {skills.map(({ category, icon: Icon, items }) => (
+            <article key={category} className="reveal-item rounded-2xl border border-white/10 bg-white/[.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/20 hover:bg-white/[.055]">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="rounded-xl border border-white/10 bg-zinc-900 p-2.5 text-cyan-300"><Icon size={20} /></div>
+                <h3 className="font-bold text-white">{category}</h3>
               </div>
-              <ul className="space-y-2">
-                {skill.items.map((item, i) => (
-                  <li key={i} className="flex items-center text-slate-600 text-sm">
-                    <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div className="flex flex-wrap gap-2">{items.map((item) => <span key={item} className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-zinc-400">{item}</span>)}</div>
+            </article>
           ))}
         </div>
       </div>
